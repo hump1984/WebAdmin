@@ -24,9 +24,17 @@
     </div>
     
     <div class="collapse navbar-collapse" id="main-nav-collapse">
-
+      <div class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary navbar-btn' %>
+        <% else %>
+          <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
+        <% end %>
+      </div>
       <ul class="nav navbar-nav navbar-right">
-
+        <li><%= link_to "calc", calc_path %></li>
+        <li><%= link_to "hr", hr_path %></li>
+        <li><%= link_to "project", project_path %></li>
       </ul>
       
     </div><!-- /.navbar-collapse -->

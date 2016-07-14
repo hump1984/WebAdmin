@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
   root 'pages#home'
+  get '/calc' => 'pages#calc'
+  get '/hr' => 'pages#hr'
+  get '/project' => 'pages#project'
 end
