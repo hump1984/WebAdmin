@@ -17,7 +17,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rediger <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Ny..</a></li>
+            <li><%= link_to 'Ny..', new_project_path %></li>
             <li><a href="#">Rediger..</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -52,37 +52,13 @@
             <th>Number</th>
             <th>Active?</th>
           </tr>
-          <tr>
-          <%= form_for :projects, url: projects_path do |f| %>
-            <td>
-              <p>
-                <%= f.text_field :name %>
-              </p>
-            </td>
-            <td>
-              <p>
-                <%= f.text_field :number %>
-              </p>
-            </td>
-            <td>
-             <p>
-                 <%= f.check_box :active %>
-             </p>
-             </td>
-             <td>
-              <p>
-                <%= f.submit %>
-              </p>
-              </td>
-           <% end %>
-        </tr> 
+
         <% @project.each do |pro| %>
             <tr>
               <td><%= pro.name %></td>
               <td><%= pro.number %></td>
-              
-              <td><%= link_to 'Show', projects_path(pro) %></td>
-              
+              <td><%= pro.active %></td>
+              <td><%= link_to 'Show', project_path(pro) %></td>
             </tr>
         <% end %>
 
