@@ -14,18 +14,19 @@
       </ul>
     </div>
   <% end %>
-
+<div class="well">
   <tr>
     <td>
+      <div class="form-group"
       <p>
         <%= f.label :name %><br>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, {class: "form-control"}  %>
       </p>
     </td>
     <td>
       <p>
         <%= f.label :number %><br>
-        <%= f.text_field :number %>
+        <%= f.text_field :number, {class: "form-control"}  %>
       </p>
     </td>
     <td>
@@ -36,8 +37,9 @@
     </td>
     <td>
       <p>
-        <%= f.submit %>
+        <%= f.submit 'Lagre', :class => 'btn btn-success'  %>
       </p>
     </td>
   </tr>
+  </div>
 <% end %>
