@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :projects
-<<<<<<< HEAD
-=======
   get '/list_projects' => 'projects#list_projects'
->>>>>>> project_page
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -62,10 +59,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/calc' => 'pages#calc'
   get '/hr' => 'pages#hr'
-<<<<<<< HEAD
   get '/projects' => 'pages#projects_path'
-=======
-  
->>>>>>> project_page
 
 end
