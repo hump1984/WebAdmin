@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/hr' => 'pages#hr'
  
   root 'pages#home'
-  devise_for :users
+  devise_for :usersg
   resources :projects
   
   
