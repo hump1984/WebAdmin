@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  
   devise_for :users
   resources :projects
   get '/list_projects' => 'projects#list_projects'
+  get '/calc' => 'pages#calc'
+  get '/hr' => 'pages#hr'
+  get '/projects' => 'pages#projects_path'
+  get '/hours' => 'pages#hours_path'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,9 +63,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'pages#home'
-  get '/calc' => 'pages#calc'
-  get '/hr' => 'pages#hr'
-  get '/projects' => 'pages#projects_path'
-
 end
