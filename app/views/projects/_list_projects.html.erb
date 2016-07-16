@@ -1,0 +1,13 @@
+<% @project.each do |pro| %>
+    <tr>
+      <td><%= pro.name %></td>
+      <td><%= pro.number %></td>
+      <td><%= pro.active %></td>
+      <td><%= link_to 'Vis', project_path(pro) %></td>
+      <td><%= link_to 'Rediger', edit_project_path(pro) %></td>
+      <td><%= link_to 'Slett', project_path(pro),
+              method: :delete,
+              data: { confirm: 'Er du sikker?' } %></td>
+    </tr>
+<% end %>
+        
